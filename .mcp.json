@@ -35,10 +35,14 @@
       "args": ["@heilgar/shadcn-ui-mcp-server"]
     },
     "github": {
-      "command": "/path/to/github-mcp-server",
-      "args": ["stdio"],
+      "url": "https://api.githubcopilot.com/mcp/",
+      "authorization_token": "Bearer <your GitHub PAT>"
+    },
+    "MongoDB": {
+      "command": "npx",
+      "args": ["-y", "mongodb-mcp-server"],
       "env": {
-          "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+        "MDB_MCP_CONNECTION_STRING": "mongodb+srv://username:password@cluster.mongodb.net/myDatabase"
       }
     },
     "playwright": {
